@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>G+D Soccer Team Generator</title>
+    </head>
+    <body>
+        <header><b>G+D Soccer Team Generator</b></header>
+        <form action="" method="POST" name="playerform">
+            {% for result in results %}
+                <input type="checkbox" value={{result}} name="available">{{result}}<br>
+            {% endfor %}
+            <input type="submit" name="submit" value="submit">
+        </form>
+        <b>{% for para in final_teams %}
+            {{para}}<br>
+        {% endfor %}</b>
+    </body>
+</html>
